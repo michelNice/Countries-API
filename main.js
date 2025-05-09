@@ -1,37 +1,66 @@
 fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population,languages`).then(response => response.json())
 .then(data => {
 
-  let container = document.querySelector('.container')
+
+  //Dom elements  needed for display and filtering
+
+  const container = document.querySelector('.container')
   const countryName = document.querySelector('#countryName')
   const selectByregion = document.querySelector('#selectByregion')
+  let currentRegion = ''
+  let currentSearch = ''
 
-
+  //When the user selects the region
   selectByregion.addEventListener('change', (e)=> {
 
-      const selectCountry = e.target.value 
-    
-      // filter  country be region
-      const region = data.filter(country => {
+    currentRegion = e.target.value
 
-        return country.region?.toLowerCase() === selectCountry.toLowerCase()
-      })
-
-      if(region.length === 0){
-          console.log(`${selectByregion}`)
-          return
-      }
-
-      region.sort((a,b)=>  a.name.common.localeCompare(b.name.common))
-
-
-      console.log(`Countries in ${selectCountry}:`, region);
-
-
-    renderCountry(region)
-
+    applyFilter()
 
   })
+  
+  //When the user types in the search input
+  countryName.addEventListener('input', (e)=>{
+    currentSearch = e.target.value.trim().toLowerCase()
 
+    applyFilter();
+  })
+  
+  // Applies both region and name filters to the country list
+  function applyFilter(){
+
+     // Filter by name if user typed something
+    let   filteredCountries = data;
+
+    if(currentRegion && currentRegion !== 'All'){
+
+       filteredCountries =  filteredCountries.filter(country => {
+        return  country.region?.toLowerCase() === currentRegion.toLowerCase()
+      })
+    }
+
+    //Filter by Name if the user type something
+    if(currentSearch){
+
+       filteredCountries =  filteredCountries.filter(country => (
+
+        country.name.common.toLowerCase().includes(currentSearch)
+      ))
+    }
+
+     filteredCountries.sort((a,b)=> a.name.common.localeCompare(b.name.common));
+
+
+    if ( filteredCountries.length === 0) {
+      console.log(`No countries found${currentRegion ? ` in ${currentRegion}` : ''}${currentSearch ? ` matching "${currentSearch}"` : ''}`);
+    }
+
+    renderCountry( filteredCountries)
+
+  }
+
+     // Renders the list of countries to the page
+     
     function renderCountry(countries){
 
       container.innerHTML = ''
@@ -41,6 +70,8 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
         return;
       }
 
+
+      //Create a card for each country
       countries.forEach(({flags,name,region,population,capital}) => {
 
         const html = `
@@ -57,27 +88,10 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
     });
     }
 
-
-  function filterCountryByName(searchTerm){
-
-    const filtered = data.filter(country => country.name.common.toLowerCase().includes(searchTerm.toLowerCase()));
-
-    return filtered
-
-  }
+ 
 
   renderCountry(data)
-
-  countryName.addEventListener('input', function(e){
-
-    const search = e.target.value.trim()
-
-    const result = filterCountryByName(search)
-
-    renderCountry(result)
-
-
-  })
+  
     
 }).catch(error => console.error(`Something went wrong please try again ${error}`))
 
