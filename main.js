@@ -16,7 +16,7 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
     currentRegion = e.target.value
 
     applyFilter()
-
+ 
   })
   
   //When the user types in the search input
@@ -60,13 +60,13 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
   }
 
      // Renders the list of countries to the page
-     
+
     function renderCountry(countries){
 
       container.innerHTML = ''
 
       if(countries.length === 0){
-        container.innerHTML = `<p>No countries found.</p>`;
+        container.innerHTML = '';
         return;
       }
 
@@ -75,13 +75,15 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
       countries.forEach(({flags,name,region,population,capital}) => {
 
         const html = `
-            <div class="card">
-                <img src="${flags.png}">
-                <h2>${name.common}</h2>
-                <p><strong>Population:</strong>${population.toLocaleString()}</p>
-                <p><strong>Region:</strong>${region}</p>
-                <p><strong>Capital:</strong>${capital ? capital[0] : 'No capital'}</p>
-            </div>
+        <a href="country.html?name=${encodeURIComponent(name.common)}" class="card-link">
+          <div class="card">
+              <img src="${flags.png}" alt="${name.common} flag">
+              <h2>${name.common}</h2>
+              <p><strong>Population:</strong> ${population.toLocaleString()}</p>
+              <p><strong>Region:</strong> ${region}</p>
+              <p><strong>Capital:</strong> ${capital ? capital[0] : 'No capital'}</p>
+           </div>
+        </a>
         ` 
         container.innerHTML += html
        
