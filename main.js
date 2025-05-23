@@ -2,7 +2,7 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
 .then(data => {
 
 
-  //Dom elements  needed for display and filtering
+  
 
   const container = document.querySelector('.container')
   const countryName = document.querySelector('#countryName')
