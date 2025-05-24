@@ -13,6 +13,6 @@ export async function getCountryDetails(name) {
     }
 
     return data[0];
-}
 
+}
 

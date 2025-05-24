@@ -1,7 +1,6 @@
 fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population,languages`).then(response => response.json())
 .then(data => {
 
-
   //Dom elements  needed for display and filtering
 
   const container = document.querySelector('.container')
@@ -25,6 +24,7 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
 
     applyFilter();
   })
+  
   
   // Applies both region and name filters to the country list
   function applyFilter(){
