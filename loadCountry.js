@@ -1,3 +1,4 @@
+//import { getCountryDetails } from "./countryDetail";
 import { getCountryDetails } from "./countryDetail";
 
 
@@ -12,7 +13,6 @@ async function loadCountry(){
         return;
     }
 
-
     try{
 
         const country = await getCountryDetails(name)
@@ -25,18 +25,19 @@ async function loadCountry(){
 
             const codes = country.borders.join(',')
 
-            const bordersRespose = await fetch(`https://restcountries.com/v3.1/alpha?codes=${codes}`)
+            const bordersResponse = await fetch(`https://restcountries.com/v3.1/alpha?codes=${codes}`)
 
-            const bordersData = await bordersRespose.json();
+            const bordersData = await bordersResponse.json();
+            
+        const borderLinks = bordersData.map(borderCountry => {
+            return `<a href="country.html?name=${encodeURIComponent(borderCountry.name.common)}">${borderCountry.name.common}</a>`;
+            }).join(', ');
 
-             const borderLinks = bordersData.map(borderCountry => {
-                return `<a href="country.html?name=${encodeURIComponent(borderCountry.name.common)}">${borderCountry.name.common}</a>`;
-             }).join(', ');
 
                bordersHTML = `<p><strong>Borders:</strong> ${borderLinks}</p>`;
          }
         
-         document.body.innerHTML = 
+         document.body.innerText = 
          
          
          `<div class="card">
@@ -51,6 +52,8 @@ async function loadCountry(){
         </div>
         `;
 
+        console.log(country.region)
+
     }catch(error){
         document.body.innerHTML = `<h2>Error loading country: ${error.message}</h2>`;
     }
@@ -59,4 +62,3 @@ async function loadCountry(){
 
 loadCountry()
 
-alert('hi')
