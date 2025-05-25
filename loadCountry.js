@@ -1,4 +1,3 @@
-//import { getCountryDetails } from "./countryDetail";
 import { getCountryDetails } from "./countryDetail";
 
 
@@ -37,7 +36,7 @@ async function loadCountry(){
                bordersHTML = `<p><strong>Borders:</strong> ${borderLinks}</p>`;
          }
         
-         document.body.innerText = 
+         document.body.innerHTML = 
          
          
          `<div class="card">
@@ -62,3 +61,4 @@ async function loadCountry(){
 
 loadCountry()
 
+console.log('hi')
