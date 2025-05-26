@@ -22,28 +22,32 @@ body {
     display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
     gap: 1rem;
-    width:1400px;
+    width:1300px;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
   }
+  
   
   .card {
     background: white;
     border-radius: 2px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     overflow: hidden;
-    width: 350px;
+    width:250px;
     margin:  2rem 0;
+    border-radius: 5px;
+     object-fit:contain;
   }
 
 
   
   .card img {
-    width: 100%;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 7 / 4; /* or nothing at all */
+}
 
-  }
   
   .card h2 {
     font-size: 1.25rem;
@@ -56,7 +60,7 @@ body {
   }
   
   .card p strong {
-    font-weight: 600;
+    font-weight: 100;
   }
 
   .card h2,
