@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: 'Inter', 'Helvetica', 'Segoe UI', Arial, sans-serif;
     background: #f0f0f0;
@@ -13,10 +15,32 @@ body {
     min-height: 100vh;
   }
 
+  
+
+  nav{
+    background: #c83737;
+  }
+
   a{
     text-decoration:none ;
     color: inherit;
   }
+
+ 
+ form{
+
+  padding: 2rem 0;
+ }
+
+  form,
+  .nav-content{
+    margin: 0 auto;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    padding:1.5rem 0;
+  }
+  
   
   .container {
     display:grid;
@@ -26,6 +50,8 @@ body {
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+    font-size: .4rem;
+    
   }
   
   
@@ -45,25 +71,28 @@ body {
   .card img {
   max-width: 100%;
   height: auto;
-  aspect-ratio: 7 / 4; /* or nothing at all */
+  aspect-ratio: 7 / 4; 
 }
 
   
-  .card h2 {
+  .card h3 {
     font-size: 1.25rem;
     margin: 0.5rem;
+    
   }
   
   .card p {
     margin: 0.5rem;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    font-weight: 800;
   }
   
   .card p strong {
-    font-weight: 100;
+    font-weight:50;
+    
   }
 
-  .card h2,
+  .card h3,
   .card p{
     padding:0.4rem;
   }

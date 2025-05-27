@@ -78,10 +78,10 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
         <a href="country.html?name=${encodeURIComponent(name.common)}" class="card-link">
           <div class="card">
               <img src="${flags.png}" alt="${name.common} flag">
-              <h2>${name.common}</h2>
-              <p><strong>Population:</strong> ${population.toLocaleString()}</p>
-              <p><strong>Region:</strong> ${region}</p>
-              <p><strong>Capital:</strong> ${capital ? capital[0] : 'No capital'}</p>
+              <h3>${name.common}</h3>
+              <p>Population: <strong>${population.toLocaleString()} </strong></p>
+              <p>Region:<strong> ${region}</strong></p>
+              <p>Capital:<strong> ${capital ? capital[0] : 'No capital'}</strong></p>
            </div>
         </a>
         ` 

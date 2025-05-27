@@ -31,7 +31,7 @@ async function loadCountry() {
       <div class="">
         <img src="${country.flags.png}" alt="${country.name.common} flag">
         <h2>${country.name.common}</h2>
-        <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
+        <p>Population: <strong> ${country.population.toLocaleString()} </strong></p>
         <p><strong>Region:</strong> ${country.region}</p>
         <p><strong>Capital:</strong> ${country.capital?.[0] ?? 'No capital'}</p>
         <p><strong>Languages:</strong> ${Object.values(country.languages ?? {}).join(', ')}</p>
