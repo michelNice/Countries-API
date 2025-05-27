@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Countries</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
     <header>
          <nav>
             <div class="nav-content">
-                 <div>World</div>
-                 <p>hi</p>
+                 <h2>Where in the world?</h2>
+                 <p><i class="fas fa-moon"></i> DarkMode</p>
             </div>
         </nav>
     </header>
     <form action="" method="get">
         <input type="text" id="countryName" placeholder="Search country"> 
         <select name="" id="selectByregion">
-            <option value="All">Filter by Region</option>
+            Filter by Region
+            <option value="All">All</option>
             <option value="Africa">Africa</option>
             <option value="Americas">Americas</option>
             <option value="Asia">Asia</option>
@@ -28,6 +31,7 @@
         </select>
     </form>
      <div class="container"></div>
-      <script src="main.js"></script>
+      <script src="js/main.js"></script>
+      <script src="modeSwitch.js"></script>
 </body>
 </html>

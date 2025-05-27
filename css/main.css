@@ -18,7 +18,7 @@ body {
   
 
   nav{
-    background: #c83737;
+    background: #fff;
   }
 
   a{
@@ -40,6 +40,9 @@ body {
     justify-content: space-between;
     padding:1.5rem 0;
   }
+
+  
+  
   
   
   .container {
@@ -64,6 +67,7 @@ body {
     margin:  2rem 0;
     border-radius: 5px;
      object-fit:contain;
+     height: 340px;
   }
 
 
@@ -76,14 +80,14 @@ body {
 
   
   .card h3 {
-    font-size: 1.25rem;
+    font-size: 1.20rem;
     margin: 0.5rem;
     
   }
   
   .card p {
     margin: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 800;
   }
   
