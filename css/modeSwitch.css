@@ -32,24 +32,6 @@ nav{
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/*
-option,
-select,
-input{
-  background:var(--color-input);
-  color: var(--color--input);
-  border-radius:5px;
-  
-}
-/*
-
-input{
-  width:450px;
-  padding:1.2rem 0;
-  border: 0;
-}
-
-*/
 
 
 .search-container {
@@ -73,6 +55,7 @@ input{
   outline: none;
   font-size: 1rem;
   border: 0;
+  color: var(--color--input);
 }
 
 .dropdown-container{

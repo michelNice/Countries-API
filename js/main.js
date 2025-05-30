@@ -68,7 +68,7 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
       container.innerHTML = ''
 
       if(countries.length === 0){
-        container.innerHTML = '';
+        container.innerHTML = '<p>No countries found...</p>';
         return;
       }
 
