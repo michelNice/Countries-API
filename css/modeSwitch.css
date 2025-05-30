@@ -1,15 +1,22 @@
 :root {
   --grid-unit: 1rem;
   --border-radius-base: 0.5rem;
-
   --color-bg: #ffffff;
   --color-fg: #000000;
+  --color-card:#ffffff;
+  --color-input:#fff;
+  --color--input:#000;
 }
 
 [data-theme="dark"] {
   --color-bg: #202c37;
   --color-fg: #ffffff;
+  --color-nav:#2b3743;
+  --color-input:#2b3743;
+   --color-card:#2b3743;
+   --color--input:#fff;
 }
+
 
 
 
@@ -19,6 +26,27 @@ body {
   font-family: 'Inter', sans-serif;
   transition: background-color 0.3s, color 0.3s;
 }
+
+nav{
+  background: var(--color-nav);
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+option,
+select,
+input{
+  background:var(--color-input);
+  color: var(--color--input);
+  
+}
+
+input{
+  width:300px;
+}
+
+
+
 
 .btn__theme {
   background: transparent;
