@@ -1,4 +1,4 @@
-/*function calculateSettingAsThemeString(localStorageTheme, systemSettingDark) {
+function calculateSettingAsThemeString(localStorageTheme, systemSettingDark) {
   if (localStorageTheme !== null) return localStorageTheme; 
 
   return systemSettingDark.matches ? "dark" : "light";
@@ -46,4 +46,4 @@ button.addEventListener("click", () => {
   currentThemeSetting = newTheme;
 });
 
-*/
+

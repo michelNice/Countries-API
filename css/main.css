@@ -18,7 +18,7 @@ body {
   
 
   nav{
-    /*background: #fff;*/
+    background: #fff;
     
   }
 
@@ -60,7 +60,6 @@ body {
   
   
   .card {
-    /*background: #fff;*/
     border-radius: 2px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     overflow: hidden;
@@ -105,12 +104,5 @@ body {
 
 
 
-  nav {
-  background-color: #1e1e1e; /* Not as dark as the background */
-  color: #fff;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6); /* Adds separation */
-  border-radius: 6px;
-}
 
   
