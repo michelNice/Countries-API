@@ -23,16 +23,23 @@
         </nav>
     </header>
     <form action="" method="get">
-        <input type="text" id="countryName" placeholder="Search country"> 
-        <select name="" id="selectByregion">
-            Filter by Region
-            <option value="All">All</option>
-            <option value="Africa">Africa</option>
-            <option value="Americas">Americas</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
+         <div class="search-container ">
+             <i class="fas fa-search"></i>
+             <input type="text" id="countryName" placeholder="Search for a country..."> 
+             <span class="clear-btn">✕</span>
+         </div>
+        <div class="dropdown-container">
+            <select name="" id="selectByregion">
+                <option value="All">All</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
         </select>
+
+        </div>
+        
     </form>
      <div class="container"></div>
       <script src="js/main.js"></script>

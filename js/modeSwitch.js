@@ -8,7 +8,7 @@ function calculateSettingAsThemeString(localStorageTheme, systemSettingDark) {
 function updateButton({ buttonEl, isDark }) {
   const newCta = isDark ? "Change to light theme" : "Change to dark theme";
 
-  const iconClass = isDark ? "fas fa-moon" : "fas fa-sun";
+  const iconClass = isDark ? "fas fa-sun" : "fas fa-moon"
 
   const label = isDark ? "Dark Mode" : "Light Mode";
 
