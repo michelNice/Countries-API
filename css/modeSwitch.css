@@ -45,7 +45,7 @@ nav{
   width: 100%;
   max-width: 500px;
    color: #ccc;
-  
+  /*outline:var(--color--input);*/
 }
 
 .search-container input{

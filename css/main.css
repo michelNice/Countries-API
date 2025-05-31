@@ -7,12 +7,15 @@
 
 
 body {
-    font-family: 'Inter', 'Helvetica', 'Segoe UI', Arial, sans-serif;
+    /*font-family: 'Inter', 'Helvetica', 'Segoe UI', Arial, sans-serif;*
+     font-family: 'Poppins', sans-serif;*/
+    font-family: 'Nunito Sans', sans-serif;
     background: #f0f0f0;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     min-height: 100vh;
+    font-weight: 300;
   }
 
   
@@ -66,6 +69,8 @@ body {
     background: var(--color-card);
   }
 
+  
+
 
   
   .card img {
@@ -78,18 +83,23 @@ body {
   .card h3 {
     font-size: 1.20rem;
     margin: 0.5rem;
-    
+    font-weight: 600;
   }
   
   .card p {
     margin: 0.5rem;
     font-size: 0.9rem;
-    font-weight: 800;
+   
   }
   
   .card p strong {
-    font-weight:50;
-    
+    font-weight:300;
+ 
+  }
+
+  .card p{
+    font-size: .8rem;
+    font-weight: 600;
   }
 
   .card h3,
@@ -97,7 +107,16 @@ body {
     padding:0.4rem;
   }
 
+.btn__theme {
+  margin-right:.3rem;
+  font-size:1.1rem;
+}
 
+
+.no__country{
+  font-size:1rem;
+  margin: 4rem 0;
+}
 
 
   

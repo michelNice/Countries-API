@@ -8,8 +8,16 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
   const container = document.querySelector('.container')
   const countryName = document.querySelector('#countryName')
   const selectByregion = document.querySelector('#selectByregion')
+  const btnClear = document.querySelector('.clear-btn')
   let currentRegion = ''
   let currentSearch = ''
+
+
+  btnClear.addEventListener('click', () => {
+      countryName.value = ''
+    currentSearch = ''
+      applyFilter()
+  })
 
   //When the user selects the region
   selectByregion.addEventListener('change', (e)=> {
@@ -68,7 +76,7 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
       container.innerHTML = ''
 
       if(countries.length === 0){
-        container.innerHTML = '<p>No countries found...</p>';
+        container.innerHTML = '<p class="no__country">No countries found...</p>';
         return;
       }
 
