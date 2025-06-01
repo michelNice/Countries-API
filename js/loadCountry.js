@@ -21,23 +21,31 @@ async function loadCountry() {
       const bordersData = await bordersResponse.json();
 
       const borderLinks = bordersData.map(borderCountry => {
-        return `<a href="country.html?name=${encodeURIComponent(borderCountry.name.common)}">${borderCountry.name.common}</a>`;
-      }).join(', ');
+        return `
+        
+        
+        <a href="country.html?name=${encodeURIComponent(borderCountry.name.common)}">${borderCountry.name.common}</a>`;
+      }).join(' ');
 
-      bordersHTML = `<p><strong>Borders:</strong> ${borderLinks}</p>`;
+      bordersHTML = `<p class="container__border"><strong>Borders:</strong> ${borderLinks}</p>`;
     }
 
     document.body.innerHTML = `
-      <div class="">
-        <img src="${country.flags.png}" alt="${country.name.common} flag">
-        <h2>${country.name.common}</h2>
-        <p>Population: <strong> ${country.population.toLocaleString()} </strong></p>
-        <p><strong>Region:</strong> ${country.region}</p>
-        <p><strong>Capital:</strong> ${country.capital?.[0] ?? 'No capital'}</p>
-        <p><strong>Languages:</strong> ${Object.values(country.languages ?? {}).join(', ')}</p>
-        ${bordersHTML}
-        <a href="index.html">← Back</a>
-      </div>
+    <div class="container__details">
+      <a href="index.html">← Back</a>
+        <div class="card__details">
+          <img src="${country.flags.png}" alt="${country.name.common} flag">
+          <div class="country__details">
+            <h2>${country.name.common}</h2>
+            <p>Population: <strong> ${country.population.toLocaleString()} </strong></p>
+            <p><strong>Region:</strong> ${country.region}</p>
+            <p><strong>Capital:</strong> ${country.capital?.[0] ?? 'No capital'}</p>
+            <p><strong>Languages:</strong> ${Object.values(country.languages ?? {}).join('')}</p>
+            ${bordersHTML}
+          </div>
+        </div>
+    </div>
+     
     `;
 
     console.log(country.region);

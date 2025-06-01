@@ -112,6 +112,10 @@ body {
   font-size:1.1rem;
 }
 
+.clear-btn{
+  cursor: pointer;
+}
+
 
 .no__country{
   font-size:1rem;
