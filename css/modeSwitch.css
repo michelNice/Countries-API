@@ -91,3 +91,10 @@ select#selectByregion{
   border: none;
   color: var(--color-fg);
 }
+
+
+
+@media(max-width:65rem){
+
+  
+}

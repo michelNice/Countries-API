@@ -3,7 +3,8 @@ import { getCountryDetails } from "./countryDetail.js";
 async function loadCountry() {
   const params = new URLSearchParams(window.location.search);
   const name = params.get('name');
-  //const container = document.querySelector('.country-container');
+
+  const container = document.querySelector('.country-container');
 
   if (!name) {
     container.innerHTML = '<h2>No country specified</h2>';
@@ -30,11 +31,14 @@ async function loadCountry() {
       bordersHTML = `<p class="container__border"><strong>Borders:</strong> ${borderLinks}</p>`;
     }
 
-    document.body.innerHTML = `
+    container.innerHTML = `
+   
     <div class="container__details">
-      <a href="index.html">← Back</a>
+      <a class="btn__back" href="index.html">← Back</a>
         <div class="card__details">
-          <img src="${country.flags.png}" alt="${country.name.common} flag">
+          <div>
+              <img class="country__img" src="${country.flags.svg}" alt="${country.name.common} flag">
+          </div>
           <div class="country__details">
             <h2>${country.name.common}</h2>
             <p>Population: <strong> ${country.population.toLocaleString()} </strong></p>
