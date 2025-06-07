@@ -43,6 +43,10 @@ body {
     padding:1.5rem 0;
   }
 
+  .nav-content{
+    align-items: center;
+  }
+
   .container {
     display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
@@ -153,15 +157,13 @@ body {
   }
 
   .card img {
-
-    display: block;
+  display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 7 / 4;
   }
 
-  nav,
-  .nav-content,
+
   .container-form{
     display: flex;
     flex-direction: column;
@@ -171,12 +173,20 @@ body {
     width: 100%;
   }
 
+
+  .container-form,
   .nav-content{
-    display: flex;
-    flex-direction: column;
+    padding:1.5rem 1rem;
+   
+  }
+
+  .nav-content h2{
+    font-size:1rem;
   }
 
 
+
+  
   .container-form{
     gap: 2rem;
   

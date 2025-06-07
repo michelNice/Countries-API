@@ -39,13 +39,20 @@ async function loadCountry() {
           <div>
               <img class="country__img" src="${country.flags.svg}" alt="${country.name.common} flag">
           </div>
+          
           <div class="country__details">
-            <h2>${country.name.common}</h2>
-            <p>Population: <strong> ${country.population.toLocaleString()} </strong></p>
-            <p><strong>Region:</strong> ${country.region}</p>
-            <p><strong>Capital:</strong> ${country.capital?.[0] ?? 'No capital'}</p>
-            <p><strong>Languages:</strong> ${Object.values(country.languages ?? {}).join('')}</p>
-            ${bordersHTML}
+            <div class="country__detais_items">
+                <h2>${country.name.common}</h2>
+                <p>Population: <strong> ${country.population.toLocaleString()} </strong></p>
+                <p><strong>Region:</strong> ${country.region}</p>
+                <p><strong>Capital:</strong> ${country.capital?.[0] ?? 'No capital'}</p>
+                <p><strong>Languages:</strong> ${Object.values(country.languages ?? {}).join('')}</p>
+                ${bordersHTML}
+            </div>
+            <div class="country__detais_items">
+                <h1>Test Here</h1>
+            </div>
+            
           </div>
         </div>
     </div>
