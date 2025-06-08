@@ -6,7 +6,7 @@ export function initThemeToggle(buttonEl) {
 
   function updateButton({ buttonEl, isDark }) {
     const newCta = isDark ? "Change to light theme" : "Change to dark theme";
-    const iconClass = isDark ? "fas fa-sun" : "fas fa-moon";
+    const iconClass = isDark ? "fas fa-lightbulb" : "fas fa-moon";
     const label = isDark ? "Light Mode" : "Dark Mode";
 
     buttonEl.setAttribute("aria-label", newCta);

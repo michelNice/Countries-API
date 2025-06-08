@@ -3,7 +3,7 @@ body {
   background-color: #f2f2f2;
   color: #111517;
   margin: 0;
-  /*padding: 2rem;*/
+
 
 }
 
@@ -94,4 +94,22 @@ a {
     
 }
 
+
+.country__details{
+  display: flex;
+  flex-direction: column;
 }
+
+.container__border {
+  padding: 2rem 1rem;
+  order: 2; /* Make sure it comes after other elements in the column */
+}
+
+.btn__back{
+  padding:.6rem 2rem;
+  font-size:.6rem;
+}
+
+
+}
+

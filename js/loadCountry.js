@@ -48,9 +48,13 @@ async function loadCountry() {
                 <p><strong>Capital:</strong> ${country.capital?.[0] ?? 'No capital'}</p>
                 <p><strong>Languages:</strong> ${Object.values(country.languages ?? {}).join('')}</p>
                 ${bordersHTML}
+                <p></p>
             </div>
             <div class="country__detais_items">
-                <h1>Test Here</h1>
+                <p><strong>Top level Domain:</strong> ${country.tld?.join(', ') ?? 'N/A'}</p>
+                <p><strong>Currencies:</strong> ${Object.values(country.currencies ?? {}).map(c => `${c.name} (${c.symbol})`).join(', ')}</p>
+                 <p><strong>Languages:</strong> ${Object.values(country.languages ?? {}).join(', ')}</p>
+
             </div>
             
           </div>
