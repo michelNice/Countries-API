@@ -1,61 +1,55 @@
-🌍 REST Countries Explorer — Witcher Themed
-Explore all countries of the world through a dark fantasy lens!
-Live Demo 🔗
+# 🌍 REST Countries Explorer — Witcher Themed
 
-🧙‍♂️ About the Project
-This web application fetches and displays detailed information about countries using the REST Countries API. It features a sleek, atmospheric design inspired by the color palette of The Witcher video game series — offering users a unique, immersive browsing experience.
+[🔗 Live Demo](https://countries-api-blue-theta.vercel.app/)
 
-Users can:
+A stylish and responsive frontend application that allows users to explore detailed information about countries around the world. Built with JavaScript and styled using a dark fantasy theme inspired by *The Witcher*, this project merges functionality with immersive design.
 
-Browse countries by region
+---
 
-Search by name
+## 📌 Project Overview
 
-View detailed country data (including bordering countries)
+This project uses the [REST Countries API](https://restcountries.com/) to fetch and display information about countries in a clean, user-friendly UI. It supports filtering, search, dark/light mode toggling, and detailed country views — all styled with a custom Witcher-inspired theme.
 
-Switch between light and dark modes (with custom Witcher-themed styling)
+---
 
-📸 Preview
-🌐 Start Page
+## ✨ Features
 
+- 🌐 **Country Overview** – View flag, name, population, region, and capital
+- 🔎 **Search** – Quickly find a country by name
+- 🧭 **Filter by Region** – Narrow your search by continent
+- 📄 **Country Detail Page** – Explore languages, currencies, borders, and more
+- 🌗 **Dark/Light Mode Toggle** – Custom dark mode themed after *The Witcher*
+- 📱 **Responsive Design** – Fully mobile-friendly interface
 
-🧾 Details Page
+---
 
+## 🎨 Witcher-Themed Styling
 
-✨ Features
-🔍 Search Bar – Find countries by typing their name
+The interface takes inspiration from the dark, medieval world of *The Witcher*, using:
 
-🌍 Filter by Region – Narrow down results by continent
+- Deep blacks and grays for backgrounds
+- Cool-toned highlights and shadows
+- Earthy, subdued accent colors
+- Clean UI layout with fantasy atmosphere
 
-📄 Country Details View – View flag, capital, population, currency, and more
+---
 
-🌘 Theme Toggle – Switch between light mode and a dark, Witcher-themed UI
+## 🛠 Tech Stack
 
-📱 Responsive Design – Works beautifully on desktop, tablet, and mobile
+- HTML, CSS, JavaScript (Vanilla)
+- REST Countries API
+- CSS Variables for theme management
+- LocalStorage for theme persistence
+- Deployed via [Vercel](https://vercel.com)
 
-🎨 The Witcher-Inspired Theme
-The UI uses a dark, moody palette with:
+---
 
-🖤 Charcoal grays and muted blacks for the background
+## 📸 Preview
 
-⚔️ Cold metallic hues for accents
+### 🌍 Start Page  
+![Start](https://github.com/user-attachments/assets/59cd83b9-1b20-46bf-b99f-68c1b45baae4)
 
-🌲 Deep greens and dusky reds for highlights
+### 🧾 Country Details  
+![Details](https://github.com/user-attachments/assets/38f01412-38b7-44f0-8bc3-792b1744d77b)
 
-📜 Medieval-inspired typography and visual tone
-
-This gives the application a brooding and immersive aesthetic—perfect for fans of The Witcher.
-
-🧰 Built With
-HTML, CSS, JavaScript
-
-REST Countries API
-
-Responsive design using Flexbox & Grid
-
-LocalStorage for theme persistence
-
-Vite for fast frontend tooling (if applicable)
-
-Deployed on Vercel
 
