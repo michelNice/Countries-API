@@ -1,4 +1,4 @@
-
+/*
 
 fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population,languages`).then(response => response.json())
 .then(data => {
@@ -106,4 +106,29 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
   
     
 }).catch(error => console.error(`Something went wrong please try again ${error}`))
+*/
 
+
+
+async function restCountries(){
+
+  try{
+
+    const response = await fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population,languages`)
+    
+    const data = await response.json();
+
+
+    const container = document.querySelector('.container')
+    const countryName = document.querySelector('#countryName')
+    const btnClear = document.querySelector('.clear-btn')
+    const selectByregion = document.querySelector('#selectByregion')
+
+    console.log(container,countryName,btnClear,selectByregion)
+
+  } catch(error){
+      console.error(`Something went wrong please try again ${error}`)
+  }
+}
+
+restCountries()
