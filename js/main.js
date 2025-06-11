@@ -106,8 +106,9 @@ fetch(`https://restcountries.com/v3.1/all?fields=name,flags,region,capital,popul
   
     
 }).catch(error => console.error(`Something went wrong please try again ${error}`))
-*/
 
+/////
+*/
 
 
 async function restCountries(){
@@ -124,7 +125,36 @@ async function restCountries(){
     const btnClear = document.querySelector('.clear-btn')
     const selectByregion = document.querySelector('#selectByregion')
 
-    console.log(container,countryName,btnClear,selectByregion)
+
+    function renderCountry(country){
+
+      container.innerHTML = ''
+
+      if(country.length === 0){
+          container.innerHTML = '<p class="no__country">No countries found...</p>';
+          return;
+      }
+      
+      
+
+    }
+
+    data.forEach(({flags,name, region,population,capital}) =>{
+
+        const html = `
+               <a href="country.html?name=${encodeURIComponent(name.common)}" class="card-link">
+          <div class="card">
+              <img src="${flags.png}" alt="${name.common} flag">
+              <h3>${name.common}</h3>
+              <p>Population: <strong>${population.toLocaleString()} </strong></p>
+              <p>Region:<strong> ${region}</strong></p>
+              <p>Capital:<strong> ${capital ? capital[0] : 'No capital'}</strong></p>
+           </div>
+        </a>
+        `
+
+        container.innerHTML += html
+    })
 
   } catch(error){
       console.error(`Something went wrong please try again ${error}`)
