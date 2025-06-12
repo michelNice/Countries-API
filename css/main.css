@@ -19,10 +19,7 @@ body {
 
   
 
-  nav{
-    background: #fff;
-    box-shadow: #f0f0f0;
-  }
+  nav{background: #fff;}
 
   a{
     text-decoration:none ;
@@ -30,9 +27,7 @@ body {
   }
 
  
- form{
-  padding: 2rem 0;
- }
+ form{padding: 2rem 0;}
 
   form,
   .nav-content{
@@ -43,13 +38,11 @@ body {
     padding:1.5rem 0;
   }
 
-  .nav-content{
-    align-items: center;
-  }
+  .nav-content{align-items: center;}
 
   .container {
     display:grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-columns:repeat(4,1fr);
     gap: 1rem;
     width:1300px;
     margin: 0 auto;
@@ -61,7 +54,6 @@ body {
   
   
   .card {
-    border-radius: 2px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     overflow: hidden;
     width:250px;
@@ -72,10 +64,6 @@ body {
     background: var(--color-card);
   }
 
-  
-
-
-  
   .card img {
   max-width: 100%;
   height: auto;
@@ -95,10 +83,7 @@ body {
    
   }
   
-  .card p strong {
-    font-weight:300;
- 
-  }
+  .card p strong {font-weight:300;}
 
   .card p{
     font-size: .8rem;
@@ -106,18 +91,14 @@ body {
   }
 
   .card h3,
-  .card p{
-    padding:0.4rem;
-  }
+  .card p{padding:0.4rem;}
 
 .btn__theme {
   margin-right:.3rem;
   font-size:1.1rem;
 }
 
-.clear-btn{
-  cursor: pointer;
-}
+.clear-btn{cursor: pointer;}
 
 
 .no__country{
@@ -128,13 +109,6 @@ body {
 
 
 @media(max-width:65rem){
-  body{
-   
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    flex-direction: column;
-  }
 
   .container{
     
@@ -145,22 +119,15 @@ body {
 
 
     .card {
-    border-radius: 2px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-    overflow: hidden;
     width:100%;
     margin:  2rem 0;
-    border-radius: 5px;
     object-fit:contain;
     height:auto;
-    background: var(--color-card);
   }
 
   .card img {
-  display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 7 / 4;
   }
 
 
@@ -169,33 +136,18 @@ body {
     flex-direction: column;
   }
 
-  .container-form .search-container{
-    width: 100%;
-  }
-
+  .container-form .search-container{width: 100%;}
 
   .container-form,
   .nav-content{
     padding:1.5rem 1rem;
    
   }
-
-  .nav-content h2{
-    font-size:1rem;
-  }
-
-
-
+  .nav-content h2{font-size:1rem;}
   
-  .container-form{
-    gap: 2rem;
-  
-  }
+  .container-form{gap: 2rem;}
 
-
-  .container__details{
-    padding:1rem 1rem;
-  }
+  .container__details{padding:1rem 1rem;}
  
 }
 

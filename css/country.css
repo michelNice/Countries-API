@@ -81,7 +81,7 @@ a {
 }
 
 .card__details{
-  display: flex;
+  /*display: flex;*/
   width: 100%;
   flex-direction:column;
   gap:2rem;
@@ -96,7 +96,7 @@ a {
 
 
 .country__details{
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
 }
 

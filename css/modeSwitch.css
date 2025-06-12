@@ -17,13 +17,9 @@
    --color--input:#fff;
 }
 
-
-
-
 body {
   background-color: var(--color-bg);
   color: var(--color-fg);
-  font-family: 'Inter', sans-serif;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -93,8 +89,3 @@ select#selectByregion{
 }
 
 
-
-@media(max-width:65rem){
-
-  
-}
