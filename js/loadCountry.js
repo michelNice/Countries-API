@@ -23,8 +23,7 @@ async function loadCountry() {
 
       const borderLinks = bordersData.map(borderCountry => {
         return `
-        
-        
+
         <a href="country.html?name=${encodeURIComponent(borderCountry.name.common)}">${borderCountry.name.common}</a>`;
       }).join(' ');
 
@@ -60,10 +59,8 @@ async function loadCountry() {
           </div>
         </div>
     </div>
-     
     `;
 
-    console.log(country.region);
   } catch (error) {
     document.body.innerHTML = `<h2>Error loading country: ${error.message}</h2>`;
   }
