@@ -1,20 +1,18 @@
 :root {
-  --grid-unit: 1rem;
-  --border-radius-base: 0.5rem;
   --color-bg: #ffffff;
   --color-fg: #000000;
-  --color-card:#ffffff;
-  --color-input:#fff;
-  --color--input:#000;
+  --color-card: #ffffff;
+  --input-bg: #fff;
+  --input-fg: #000;
 }
 
 [data-theme="dark"] {
   --color-bg: #202c37;
   --color-fg: #ffffff;
-  --color-nav:#2b3743;
-  --color-input:#2b3743;
-   --color-card:#2b3743;
-   --color--input:#fff;
+  --color-nav: #2b3743;
+  --color-card: #2b3743;
+  --input-bg: #2b3743;
+  --input-fg: #fff;
 }
 
 body {
@@ -23,69 +21,60 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-nav{
+nav {
   background: var(--color-nav);
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .search-container {
-   background:var(--color-input);
+  background: var(--input-bg);
   border-radius: 10px;
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
-  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   max-width: 500px;
-   color: #ccc;
-  /*outline:var(--color--input);*/
+  width: 100%;
+  color: var(--input-fg);
 }
 
-.search-container input{
-
+.search-container input {
   flex: 1;
   background: transparent;
   outline: none;
   font-size: 1rem;
   border: 0;
-  color: var(--color--input);
+  color: var(--input-fg);
 }
 
-.dropdown-container{
+.dropdown-container {
   width: 200px;
   border-radius: 10px;
-  background:var(--color-input);
+  background: var(--input-bg);
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
   position: relative;
 }
 
-select#selectByregion{
-    width: 100%;
+select#selectByregion {
+  width: 100%;
   padding: 1rem;
   border: none;
   border-radius: 10px;
-  background-color:var(--color-input);
-  color:var(--color--input);
+  background-color: var(--input-bg);
+  color: var(--input-fg);
   font-size: 1rem;
-  appearance: none; /* Remove default arrow */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  cursor: pointer;
+  appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23ccc' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 1rem;
+  cursor: pointer;
 }
-
-
 
 .btn__theme {
   background: transparent;
   border: none;
   color: var(--color-fg);
+  cursor: pointer;
 }
-
-
