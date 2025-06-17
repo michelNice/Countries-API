@@ -1,0 +1,23 @@
+{
+  "name": "promise",
+  "version": "1.0.0",
+  "description": "[🔗 Live Demo](https://countries-api-blue-theta.vercel.app/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelNice/Countries-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michelNice/Countries-API/issues"
+  },
+  "homepage": "https://github.com/michelNice/Countries-API#readme",
+  "dependencies": {
+    "jest": "^30.0.0"
+  }
+}
