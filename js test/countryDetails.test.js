@@ -1,7 +1,4 @@
-const { getCountryDetails } = require("../js/countryDetail");
-// no lugar de export
-module.exports = { getCountryDetails };
-
+import { getCountryDetails } from "../js/countryDetail.js";
 
 beforeEach(() => {
   global.fetch = jest.fn();
@@ -38,4 +35,3 @@ test('lança erro quando a API falha', async () => {
     .rejects
     .toThrow('Failed to fetch PaísInexistente (HTTP 404)');
 });
-n
