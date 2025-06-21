@@ -88,4 +88,11 @@ async function restCountries() {
 // Exportando a função para o teste funcionar
 export { restCountries };
 
-restCountries()
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  window.addEventListener('DOMContentLoaded', () => {
+    restCountries();
+  });
+}
+
+
+

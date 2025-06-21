@@ -1,9 +1,11 @@
 /**
  * @jest-environment jsdom
  */
+
 import { restCountries } from '../js/main';
 
-global.fetch = jest.fn(() => 
+// Mock global do fetch para simular resposta da API
+global.fetch = jest.fn(() =>
   Promise.resolve({
     json: () => Promise.resolve([
       { 
@@ -17,16 +19,45 @@ global.fetch = jest.fn(() =>
   })
 );
 
-test('restCountries fetches and processes data', async () => {
-  document.body.innerHTML = `
-    <div class="container"></div>
-    <input id="countryName">
-    <select id="selectByregion"></select>
-    <button class="clear-btn"></button>
-  `;
+describe('restCountries', () => {
+  beforeEach(() => {
+    // Prepara o DOM simulado antes de cada teste
+    document.body.innerHTML = `
+      <div class="container"></div>
+      <input id="countryName">
+      <select id="selectByregion"></select>
+      <button class="clear-btn"></button>
+    `;
+  });
 
-  await restCountries();
+  test('fetches data and renders country info', async () => {
+    await restCountries(); // executa a função
 
-  expect(fetch).toHaveBeenCalledTimes(1);
-  expect(document.querySelector('.container').innerHTML).toContain('Testland');
+    // Verifica se o fetch foi chamado 1 vez
+    expect(fetch).toHaveBeenCalledTimes(1);
+
+    // Verifica se a URL da API foi chamada corretamente
+    expect(fetch).toHaveBeenCalledWith(
+      'https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population,languages'
+    );
+
+    // Verifica se o país retornado foi adicionado ao DOM
+    expect(document.querySelector('.container').innerHTML).toContain('Testland');
+  });
+
+  test('handles fetch failure gracefully', async () => {
+    // Faz o fetch simular uma falha
+    fetch.mockImplementationOnce(() => Promise.reject('API failure'));
+
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+
+    await restCountries();
+
+    // Verifica se o erro foi capturado e logado
+    expect(consoleSpy).toHaveBeenCalledWith(
+      expect.stringContaining('Something went wrong, please try again:')
+    );
+
+    consoleSpy.mockRestore(); // Restaura o console original
+  });
 });
