@@ -83,5 +83,9 @@ async function restCountries() {
   }
 }
 
+
+
 // Exportando a função para o teste funcionar
 export { restCountries };
+
+restCountries()
