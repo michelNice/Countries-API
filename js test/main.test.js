@@ -1,13 +1,9 @@
-/**
- * @jest-environment jsdom
- */
-
 import { restCountries } from '../js/main';
 
 // Mock global do fetch para simular resposta da API
 global.fetch = jest.fn(() =>
   Promise.resolve({
-    json: () => Promise.resolve([
+    json: () => Promise.resolve([ 
       { 
         name: { common: 'Testland' }, 
         region: 'Europe', 
