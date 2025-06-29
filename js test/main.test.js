@@ -28,7 +28,7 @@ describe('restCountries', () => {
   test('fetches data and renders country info', async () => {
     await restCountries(); // executa a função
 
-    // Verifica se o fetch foi chamado 1 vez
+    
     expect(fetch).toHaveBeenCalledTimes(1);
 
     // Verifica se a URL da API foi chamada corretamente
